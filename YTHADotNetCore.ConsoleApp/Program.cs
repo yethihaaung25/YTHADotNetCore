@@ -32,10 +32,13 @@ Console.WriteLine("Hello, World!");
 //    Console.WriteLine("-----------------------------------------");
 //}
 
-AdoDotNetExample adoDotNetExample = new AdoDotNetExample();
+//AdoDotNetExample adoDotNetExample = new AdoDotNetExample();
 //adoDotNetExample.Read();
 //adoDotNetExample.Create("title 1","author 1","content 1");
 //adoDotNetExample.Update(6,"title 10", "author 10", "content 10");
 //adoDotNetExample.Delete(6);
-adoDotNetExample.Edit(5);
+//adoDotNetExample.Edit(5);
+
+DapperExample dapper = new DapperExample();
+dapper.Run();
 Console.Read();

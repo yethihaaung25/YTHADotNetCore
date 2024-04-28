@@ -39,6 +39,9 @@ Console.WriteLine("Hello, World!");
 //adoDotNetExample.Delete(6);
 //adoDotNetExample.Edit(5);
 
-DapperExample dapper = new DapperExample();
-dapper.Run();
+//DapperExample dapper = new DapperExample();
+//dapper.Run();
+
+EfCoreExample efCoreExample = new EfCoreExample();
+efCoreExample.Run();
 Console.Read();

@@ -16,6 +16,7 @@ namespace YTHADotNetCore.ConsoleApp
             InitialCatalog = "DotNetBatch4",
             UserID = "sa",
             Password = "as",
+            TrustServerCertificate = true,
         };
 
     }

@@ -6,8 +6,10 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using YTHADotNetCore.ConsoleApp.Dtos;
+using YTHADotNetCore.ConsoleApp.Services;
 
-namespace YTHADotNetCore.ConsoleApp
+namespace YTHADotNetCore.ConsoleApp.DapperExample
 {
     internal class DapperExample
     {
@@ -25,7 +27,7 @@ namespace YTHADotNetCore.ConsoleApp
         {
             using IDbConnection db = new SqlConnection(ConnectionStrings.SqlConnectionStringBuilder.ConnectionString);
             List<BlogDto> lst = db.Query<BlogDto>("SELECT * FROM Tbl_Blog").ToList();
-            foreach (BlogDto item in lst) 
+            foreach (BlogDto item in lst)
             {
                 Console.WriteLine(item.BlogId);
                 Console.WriteLine(item.BlogTitle);
@@ -39,7 +41,7 @@ namespace YTHADotNetCore.ConsoleApp
         {
             using IDbConnection db = new SqlConnection(ConnectionStrings.SqlConnectionStringBuilder.ConnectionString);
             var item = db.Query<BlogDto>("SELECT * FROM Tbl_Blog WHERE BlogId = @BlogId", new BlogDto { BlogId = id }).FirstOrDefault();
-            if(item is null)
+            if (item is null)
             {
                 Console.WriteLine("Not Found");
                 return;
@@ -70,14 +72,14 @@ namespace YTHADotNetCore.ConsoleApp
 		   @BlogAuthor,
 		   @BlogContent
            )";
-            using IDbConnection db = new SqlConnection (ConnectionStrings.SqlConnectionStringBuilder.ConnectionString);
-            int result = db.Execute(query,item);
+            using IDbConnection db = new SqlConnection(ConnectionStrings.SqlConnectionStringBuilder.ConnectionString);
+            int result = db.Execute(query, item);
             string message = result > 0 ? "Saving Successful" : "Saving Failed";
             Console.WriteLine(message);
 
         }
 
-        private void Update(int id, string  title, string author, string content)
+        private void Update(int id, string title, string author, string content)
         {
             var item = new BlogDto
             {
@@ -94,7 +96,7 @@ namespace YTHADotNetCore.ConsoleApp
             WHERE BlogId = @BlogId";
 
             using IDbConnection db = new SqlConnection(ConnectionStrings.SqlConnectionStringBuilder.ConnectionString);
-            var result = db.Execute(query,item);
+            var result = db.Execute(query, item);
             string message = result > 0 ? "Update Successful" : "Update Failed";
             Console.WriteLine(message);
         }
@@ -109,7 +111,7 @@ namespace YTHADotNetCore.ConsoleApp
             WHERE BlogId = @BlogId";
 
             using IDbConnection db = new SqlConnection(ConnectionStrings.SqlConnectionStringBuilder.ConnectionString);
-            var result = db.Execute(query,item);
+            var result = db.Execute(query, item);
             string message = result > 0 ? "Delete Successful" : "Delete Failed";
             Console.WriteLine(message);
         }

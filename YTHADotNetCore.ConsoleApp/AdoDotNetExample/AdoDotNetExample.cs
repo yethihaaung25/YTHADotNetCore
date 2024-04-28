@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace YTHADotNetCore.ConsoleApp
+namespace YTHADotNetCore.ConsoleApp.AdoDotNetExample
 {
     public class AdoDotNetExample
     {
@@ -18,7 +18,7 @@ namespace YTHADotNetCore.ConsoleApp
             Password = "as"
         };
         public void Read()
-        {   
+        {
             SqlConnection connection = new SqlConnection(_sqlConnectionStringBuilder.ConnectionString);
             connection.Open();
             Console.WriteLine("Connection open.");
@@ -57,12 +57,12 @@ namespace YTHADotNetCore.ConsoleApp
 		   @BlogContent
            )";
 
-            SqlCommand cmd = new SqlCommand(query,connection);
-            cmd.Parameters.AddWithValue("@BlogTitle",title);
+            SqlCommand cmd = new SqlCommand(query, connection);
+            cmd.Parameters.AddWithValue("@BlogTitle", title);
             cmd.Parameters.AddWithValue("@BlogAuthor", author);
             cmd.Parameters.AddWithValue("@BlogContent", content);
             int count = cmd.ExecuteNonQuery();
-            
+
             connection.Close();
             string message = count > 0 ? "Saving Successful" : "Saving Failed";
             Console.WriteLine(message);
@@ -75,18 +75,18 @@ namespace YTHADotNetCore.ConsoleApp
 
             string query = "SELECT * FROM Tbl_Blog WHERE BlogId = @BlogId";
             SqlCommand cmd = new SqlCommand(query, connection);
-            cmd.Parameters.AddWithValue("@BlogId",id);
+            cmd.Parameters.AddWithValue("@BlogId", id);
             SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(cmd);
             DataTable dt = new DataTable();
             sqlDataAdapter.Fill(dt);
 
             connection.Close();
 
-            if(dt.Rows.Count == 0)
+            if (dt.Rows.Count == 0)
             {
                 Console.WriteLine("No Data Found!!!");
                 return;
-            }    
+            }
 
             DataRow dr = dt.Rows[0];
             Console.WriteLine("Blog Id => " + dr["BlogId"]);
@@ -96,7 +96,7 @@ namespace YTHADotNetCore.ConsoleApp
             Console.WriteLine("-----------------------------------------");
         }
 
-        public void Update(int id, string title, string author, string content) 
+        public void Update(int id, string title, string author, string content)
         {
             SqlConnection connection = new SqlConnection(_sqlConnectionStringBuilder.ConnectionString);
             connection.Open();
@@ -105,13 +105,13 @@ namespace YTHADotNetCore.ConsoleApp
               ,[BlogAuthor] = @BlogAuthor
               ,[BlogContent] = @BlogContent
             WHERE BlogId = @BlogId";
-            SqlCommand cmd = new SqlCommand(query,connection);
-            cmd.Parameters.AddWithValue("@BlogId",id);
+            SqlCommand cmd = new SqlCommand(query, connection);
+            cmd.Parameters.AddWithValue("@BlogId", id);
             cmd.Parameters.AddWithValue("@BlogTitle", title);
             cmd.Parameters.AddWithValue("@BlogAuthor", author);
             cmd.Parameters.AddWithValue("@BlogContent", content);
             int count = cmd.ExecuteNonQuery();
-            
+
             connection.Close();
             string message = count > 0 ? "Update Successful" : "Update Failed";
             Console.WriteLine(message);
@@ -124,8 +124,8 @@ namespace YTHADotNetCore.ConsoleApp
 
             string query = @"DELETE FROM [dbo].[Tbl_Blog]
             WHERE BlogId = @BlogId";
-            SqlCommand cmd = new SqlCommand(query,connection);
-            cmd.Parameters.AddWithValue("@BlogId",id);
+            SqlCommand cmd = new SqlCommand(query, connection);
+            cmd.Parameters.AddWithValue("@BlogId", id);
             int count = cmd.ExecuteNonQuery();
 
             connection.Close();

@@ -7,8 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YTHADotNetCore.ConsoleApp",
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Document", "Document", "{A6B77D76-2F36-4D15-BCFF-B1C9F280CEB6}"
 	ProjectSection(SolutionItems) = preProject
+		DotNetTrainingBatch4.sql = DotNetTrainingBatch4.sql
 		README.md = README.md
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YTHADotNetCore.RestApi", "YTHADotNetCore.RestApi\YTHADotNetCore.RestApi.csproj", "{15A23898-4749-4111-B9FE-19DEF26A7750}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,6 +23,10 @@ Global
 		{91987FFC-24FA-491F-B4E0-2A097A59EE97}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{91987FFC-24FA-491F-B4E0-2A097A59EE97}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{91987FFC-24FA-491F-B4E0-2A097A59EE97}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15A23898-4749-4111-B9FE-19DEF26A7750}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15A23898-4749-4111-B9FE-19DEF26A7750}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15A23898-4749-4111-B9FE-19DEF26A7750}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15A23898-4749-4111-B9FE-19DEF26A7750}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

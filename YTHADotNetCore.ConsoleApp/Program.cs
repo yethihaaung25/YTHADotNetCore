@@ -1,7 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using System.Data;
 using System.Data.SqlClient;
-using YTHADotNetCore.ConsoleApp;
+using YTHADotNetCore.ConsoleApp.EfCoreExample;
 
 Console.WriteLine("Hello, World!");
 

@@ -11,7 +11,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Document", "Document", "{A6
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YTHADotNetCore.RestApi", "YTHADotNetCore.RestApi\YTHADotNetCore.RestApi.csproj", "{15A23898-4749-4111-B9FE-19DEF26A7750}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YTHADotNetCore.RestApi", "YTHADotNetCore.RestApi\YTHADotNetCore.RestApi.csproj", "{15A23898-4749-4111-B9FE-19DEF26A7750}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YTHADotNetCore.Shared", "YTHADotNetCore.Shared\YTHADotNetCore.Shared.csproj", "{8A7D8A46-DEEA-414C-BD25-48A390846903}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{15A23898-4749-4111-B9FE-19DEF26A7750}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{15A23898-4749-4111-B9FE-19DEF26A7750}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{15A23898-4749-4111-B9FE-19DEF26A7750}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A7D8A46-DEEA-414C-BD25-48A390846903}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A7D8A46-DEEA-414C-BD25-48A390846903}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A7D8A46-DEEA-414C-BD25-48A390846903}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A7D8A46-DEEA-414C-BD25-48A390846903}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

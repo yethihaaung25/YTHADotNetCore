@@ -72,11 +72,11 @@ namespace YTHADotNetCore.RestApi.Controllers
             }
             if (!string.IsNullOrEmpty(blogModel.BlogAuthor))
             {
-                item.BlogTitle = blogModel.BlogAuthor;
+                item.BlogAuthor = blogModel.BlogAuthor;
             }
             if (!string.IsNullOrEmpty(blogModel.BlogContent))
             {
-                item.BlogTitle = blogModel.BlogContent;
+                item.BlogContent = blogModel.BlogContent;
             }
             int result = _dbContext.SaveChanges();
             string message = result > 0 ? "Update Success" : "Update Fail";

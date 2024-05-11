@@ -21,6 +21,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YTHADotNetCore.ConsoleAppHT
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YTHADotNetCore.ConsoleAppHTTPClientExample", "YTHADotNetCore.HTTPClientExample\YTHADotNetCore.ConsoleAppHTTPClientExample.csproj", "{FFF5E256-6097-4CCC-8669-A0EE25267894}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YTHADotNetCore.ConsoleAppRestClientExample", "YTHADotNetCore.ConsoleAppRestClientExample\YTHADotNetCore.ConsoleAppRestClientExample.csproj", "{02086FD5-1D6F-4A82-B315-B8809B52FE75}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{FFF5E256-6097-4CCC-8669-A0EE25267894}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FFF5E256-6097-4CCC-8669-A0EE25267894}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FFF5E256-6097-4CCC-8669-A0EE25267894}.Release|Any CPU.Build.0 = Release|Any CPU
+		{02086FD5-1D6F-4A82-B315-B8809B52FE75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{02086FD5-1D6F-4A82-B315-B8809B52FE75}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{02086FD5-1D6F-4A82-B315-B8809B52FE75}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{02086FD5-1D6F-4A82-B315-B8809B52FE75}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

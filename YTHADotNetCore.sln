@@ -25,7 +25,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YTHADotNetCore.ConsoleAppRe
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YTHADotNetCore.PizzaAPI", "YTHADotNetCore.PizzaAPI\YTHADotNetCore.PizzaAPI.csproj", "{1B6C50B7-8682-46B1-85F0-799A27916168}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YTHADotNetCore.ConsoleAppRefitExample", "YTHADotNetCore.ConsoleAppRefitExample\YTHADotNetCore.ConsoleAppRefitExample.csproj", "{FC77F16A-18BF-4B0F-841E-CDD117AD6B59}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YTHADotNetCore.ConsoleAppRefitExample", "YTHADotNetCore.ConsoleAppRefitExample\YTHADotNetCore.ConsoleAppRefitExample.csproj", "{FC77F16A-18BF-4B0F-841E-CDD117AD6B59}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YTHADotNetCore.WinFormsApp", "YTHADotNetCore.WinFormsApp\YTHADotNetCore.WinFormsApp.csproj", "{4596837E-D727-4990-91EE-ED4E6E3987E8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,10 @@ Global
 		{FC77F16A-18BF-4B0F-841E-CDD117AD6B59}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC77F16A-18BF-4B0F-841E-CDD117AD6B59}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC77F16A-18BF-4B0F-841E-CDD117AD6B59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4596837E-D727-4990-91EE-ED4E6E3987E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4596837E-D727-4990-91EE-ED4E6E3987E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4596837E-D727-4990-91EE-ED4E6E3987E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4596837E-D727-4990-91EE-ED4E6E3987E8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -11,7 +11,7 @@ namespace YTHADotNetCore.WinFormsApp
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new frmBlog());
+            Application.Run(new frmMainMenu());
         }
     }
 }

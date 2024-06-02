@@ -18,5 +18,11 @@ namespace YTHADotNetCore.WinFormsApp.Query
 		                                   @BlogAuthor,
 		                                   @BlogContent
                                            )";
+
+        public static string BlogList { get; } = @"SELECT [BlogId]
+                                                  ,[BlogTitle]
+                                                  ,[BlogAuthor]
+                                                  ,[BlogContent]
+                                                  FROM [DotNetBatch4].[dbo].[Tbl_Blog]";
     }
 }

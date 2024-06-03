@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             dgvBlogList = new DataGridView();
+            colId = new DataGridViewTextBoxColumn();
             colEdit = new DataGridViewButtonColumn();
             colDelete = new DataGridViewButtonColumn();
-            colId = new DataGridViewTextBoxColumn();
             colTitle = new DataGridViewTextBoxColumn();
             colAuthor = new DataGridViewTextBoxColumn();
             colContent = new DataGridViewTextBoxColumn();
@@ -44,7 +44,7 @@
             dgvBlogList.AllowUserToDeleteRows = false;
             dgvBlogList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvBlogList.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvBlogList.Columns.AddRange(new DataGridViewColumn[] { colEdit, colDelete, colId, colTitle, colAuthor, colContent });
+            dgvBlogList.Columns.AddRange(new DataGridViewColumn[] { colId, colEdit, colDelete, colTitle, colAuthor, colContent });
             dgvBlogList.Dock = DockStyle.Fill;
             dgvBlogList.Location = new Point(0, 0);
             dgvBlogList.Name = "dgvBlogList";
@@ -53,6 +53,15 @@
             dgvBlogList.RowTemplate.Height = 29;
             dgvBlogList.Size = new Size(978, 544);
             dgvBlogList.TabIndex = 0;
+            dgvBlogList.CellContentClick += dgvBlogList_CellContentClick;
+            // 
+            // colId
+            // 
+            colId.DataPropertyName = "BlogId";
+            colId.HeaderText = "ID";
+            colId.MinimumWidth = 6;
+            colId.Name = "colId";
+            colId.ReadOnly = true;
             // 
             // colEdit
             // 
@@ -71,15 +80,6 @@
             colDelete.ReadOnly = true;
             colDelete.Text = "Delete";
             colDelete.UseColumnTextForButtonValue = true;
-            // 
-            // colId
-            // 
-            colId.DataPropertyName = "BlogId";
-            colId.HeaderText = "ID";
-            colId.MinimumWidth = 6;
-            colId.Name = "colId";
-            colId.ReadOnly = true;
-            colId.Visible = false;
             // 
             // colTitle
             // 
@@ -122,9 +122,9 @@
         #endregion
 
         private DataGridView dgvBlogList;
+        private DataGridViewTextBoxColumn colId;
         private DataGridViewButtonColumn colEdit;
         private DataGridViewButtonColumn colDelete;
-        private DataGridViewTextBoxColumn colId;
         private DataGridViewTextBoxColumn colTitle;
         private DataGridViewTextBoxColumn colAuthor;
         private DataGridViewTextBoxColumn colContent;

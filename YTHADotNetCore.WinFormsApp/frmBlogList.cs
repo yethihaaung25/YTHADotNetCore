@@ -39,20 +39,47 @@ namespace YTHADotNetCore.WinFormsApp
 
             var blogId = Convert.ToInt32(dgvBlogList.Rows[e.RowIndex].Cells["colId"].Value);
 
-            if (e.ColumnIndex == (int)EnumFormControlType.Edit) 
+            #region If Case
+            if (e.ColumnIndex == (int)EnumFormControlType.Edit)
             {
                 frmBlog frm = new frmBlog(blogId);
                 frm.ShowDialog();
 
                 BlogList();
             }
-            else if (e.ColumnIndex == (int)EnumFormControlType.Delete) 
+            else if (e.ColumnIndex == (int)EnumFormControlType.Delete)
             {
-                var confirmDialogue = MessageBox.Show("Do you want to delete?","",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+                var confirmDialogue = MessageBox.Show("Do you want to delete?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                 if (confirmDialogue != DialogResult.Yes) return;
                 BlogDelete(blogId);
                 BlogList();
             }
+
+            #endregion
+
+            #region Switch Case
+
+            //int index = e.ColumnIndex;
+            //EnumFormControlType enumFormControlType = (EnumFormControlType)index;
+            //switch (enumFormControlType)
+            //{
+            //    case EnumFormControlType.Edit:
+            //        frmBlog frm = new frmBlog(blogId);
+            //        frm.ShowDialog();
+            //        BlogList();
+            //        break;
+            //    case EnumFormControlType.Delete:
+            //        var confirmDialogue = MessageBox.Show("Do you want to delete?", "", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            //        if (confirmDialogue != DialogResult.Yes) return;
+            //        BlogDelete(blogId);
+            //        BlogList();
+            //        break;
+            //    default:
+            //        MessageBox.Show("Invalid Case.");
+            //        break;
+            //}
+
+            #endregion
         }
 
         private void BlogDelete(int blogId)

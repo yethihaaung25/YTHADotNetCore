@@ -27,7 +27,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YTHADotNetCore.PizzaAPI", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YTHADotNetCore.ConsoleAppRefitExample", "YTHADotNetCore.ConsoleAppRefitExample\YTHADotNetCore.ConsoleAppRefitExample.csproj", "{FC77F16A-18BF-4B0F-841E-CDD117AD6B59}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YTHADotNetCore.WinFormsApp", "YTHADotNetCore.WinFormsApp\YTHADotNetCore.WinFormsApp.csproj", "{4596837E-D727-4990-91EE-ED4E6E3987E8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "YTHADotNetCore.WinFormsApp", "YTHADotNetCore.WinFormsApp\YTHADotNetCore.WinFormsApp.csproj", "{4596837E-D727-4990-91EE-ED4E6E3987E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YTHADotNetCore.WinFormsAppSQLInjection", "YTHADotNetCore.WinFormsAppSQLInjection\YTHADotNetCore.WinFormsAppSQLInjection.csproj", "{05C84EAE-E99F-4A29-B003-408B58B911CA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +77,10 @@ Global
 		{4596837E-D727-4990-91EE-ED4E6E3987E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4596837E-D727-4990-91EE-ED4E6E3987E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4596837E-D727-4990-91EE-ED4E6E3987E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05C84EAE-E99F-4A29-B003-408B58B911CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05C84EAE-E99F-4A29-B003-408B58B911CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05C84EAE-E99F-4A29-B003-408B58B911CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05C84EAE-E99F-4A29-B003-408B58B911CA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

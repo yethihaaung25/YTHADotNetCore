@@ -66,19 +66,29 @@ function UpdateBlog(id,title,author,content){
 }
 
 function DeleteBlog(id){
-    let result = confirm("Are your sure to delete?");
-    if(!result) return;
-    lst = GetBlogs(); 
-    const items = lst.filter(x => x.id === id);
-    if(items.length == 0){
-        console.log("No Data Found...");
-        return;
-    }
-    lst = lst.filter(x => x.id !== id);
-    const jsonData = JSON.stringify(lst);
-    localStorage.setItem(tblBlog,jsonData)
-    successMessage("Delete Success.")
-    getBlogTable();
+    Swal.fire({
+        title: "Are you sure?",
+        text: "Do you want to delete it!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Yes, delete it!"
+      }).then((result) => {
+        if (result.isConfirmed) {
+            lst = GetBlogs(); 
+            const items = lst.filter(x => x.id === id);
+            if(items.length == 0){
+                console.log("No Data Found...");
+                return;
+            }
+            lst = lst.filter(x => x.id !== id);
+            const jsonData = JSON.stringify(lst);
+            localStorage.setItem(tblBlog,jsonData)
+            successMessage("Delete Success.")
+            getBlogTable();
+        }
+      });
 }
 
 function uuidv4() {
@@ -97,7 +107,23 @@ function uuidv4() {
 }
 
 function successMessage(message){
-    alert(message)
+    Swal.fire({
+        position: "center",
+        icon: "success",
+        title: message,
+        showConfirmButton: false,
+        timer: 1500
+      });
+    }
+
+function errorMessage(message){
+    Swal.fire({
+        position: "center",
+        icon: "error",
+        title: message,
+        showConfirmButton: false,
+        timer: 1500
+      });
 }
 
 function clearControl(){
